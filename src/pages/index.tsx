@@ -1,6 +1,4 @@
-import { ExternalLinkIcon } from "@chakra-ui/icons";
 import {
-  Box,
   Container,
   Heading,
   VStack,
@@ -10,11 +8,12 @@ import {
 } from "@chakra-ui/react";
 import { Image as ChakraImage } from "@chakra-ui/react";
 import type { NextPage } from "next";
-import { ExternalLink } from "../components/ExternalLink";
+import Introduction from "../components/Introduction";
+import LinkList from "../components/LinkList";
 
 const Home: NextPage = () => {
   return (
-    <Container p={[16, 16]} maxW="1280px">
+    <Container p={[16, 16]}>
       {/* <Grid templateColumns={["repeat(1, 1fr)", "repeat(5, 1fr)"]}> */}
       {/* <GridItem colSpan={[1, 2]}> */}
       <VStack justify="center" align="center">
@@ -28,31 +27,16 @@ const Home: NextPage = () => {
           height={20}
           borderRadius="full"
         />
-        <Heading>nemoG</Heading>
+        <Heading as="h2" size="2xl">
+          nemoG
+        </Heading>
         {/* </Box> */}
       </VStack>
       {/* </GridItem> */}
       {/* <GridItem colSpan={[1, 3]}> */}
       <VStack align="center">
-        <Text>フロントエンドエンジニアです（たぶん）</Text>
-        <Box>
-          <ExternalLink url="https://twitter.com/nemog9_" title="Twitter" />
-        </Box>
-        <Box>
-          <ExternalLink
-            url="https://nemog.hatenablog.com/"
-            title="はてなブログ"
-          />
-        </Box>
-        <Box>
-          <ExternalLink url="https://github.com/nemog9" title="GitHub" />
-        </Box>
-        <Box>
-          <ExternalLink
-            url="https://www.youtube.com/channel/UCw_spPQfZEes2cC-0Q-bkgg"
-            title="YouTube"
-          />
-        </Box>
+        <Introduction />
+        <LinkList />
       </VStack>
       {/* </GridItem> */}
       {/* </Grid> */}
