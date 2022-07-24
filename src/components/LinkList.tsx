@@ -8,24 +8,14 @@ const LinkList: FC = () => {
       <Heading as="h2" size="md">
         リンク
       </Heading>
-      <Box>
-        <ExternalLink url="https://twitter.com/nemog9_" title="Twitter" />
-      </Box>
-      <Box>
-        <ExternalLink
-          url="https://nemog.hatenablog.com/"
-          title="はてなブログ"
-        />
-      </Box>
-      <Box>
-        <ExternalLink url="https://github.com/nemog9" title="GitHub" />
-      </Box>
-      <Box>
-        <ExternalLink
-          url="https://www.youtube.com/channel/UCw_spPQfZEes2cC-0Q-bkgg"
-          title="YouTube"
-        />
-      </Box>
+      <ExternalLink url="https://twitter.com/nemog9_" title="Twitter" />
+      <ExternalLink url="https://nemog.hatenablog.com/" title="はてなブログ" />
+      <ExternalLink url="https://github.com/nemog9" title="GitHub" />
+      <ExternalLink
+        url="https://www.youtube.com/channel/UCw_spPQfZEes2cC-0Q-bkgg"
+        title="YouTube"
+      />
+      <ExternalLink url="https://note.com/nemog9" title="note" />
     </>
   );
 };
