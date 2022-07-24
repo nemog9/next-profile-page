@@ -1,5 +1,4 @@
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
-import { NextPage } from "next";
 import Link from "next/link";
 import Post from "../../../interfaces/post";
 import { getAllPosts } from "../../../lib/api";
@@ -12,7 +11,7 @@ const BlogList = ({ allPosts }: Props) => {
   return (
     <Container p={[16, 16]}>
       <Heading>記事一覧</Heading>
-      <Box mt={16}>
+      <Box mt={16} mb={16}>
         {allPosts.map(({ title, date, slug }) => {
           return (
             <Link
@@ -20,15 +19,18 @@ const BlogList = ({ allPosts }: Props) => {
               key={slug}
             >
               <a>
-                <Heading as="h3" size="md" mt={4}>
+                <Heading as="h3" size="md" mt={8}>
                   {title}
                 </Heading>
-                <Text>{date}</Text>
+                <Text mt={0}>{date}</Text>
               </a>
             </Link>
           );
         })}
       </Box>
+      <Link href="/">
+        <a>←ホームへ戻る</a>
+      </Link>
     </Container>
   );
 };

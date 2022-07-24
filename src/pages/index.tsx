@@ -1,13 +1,7 @@
-import {
-  Container,
-  Heading,
-  VStack,
-  Text,
-  // Grid,
-  // GridItem,
-} from "@chakra-ui/react";
+import { Container, Heading, VStack, Box } from "@chakra-ui/react";
 import { Image as ChakraImage } from "@chakra-ui/react";
 import type { NextPage } from "next";
+import Link from "next/link";
 import Introduction from "../components/Introduction";
 import LinkList from "../components/LinkList";
 
@@ -36,6 +30,11 @@ const Home: NextPage = () => {
       {/* <GridItem colSpan={[1, 3]}> */}
       <VStack align="center">
         <Introduction />
+        <Box p={4}>
+          <Link href="/posts">
+            <a>→ブログ記事一覧</a>
+          </Link>
+        </Box>
         <LinkList />
       </VStack>
       {/* </GridItem> */}

@@ -1,20 +1,28 @@
-import { Container, Heading, Text } from "@chakra-ui/react";
+import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 import PostType from "../../../interfaces/post";
 import { getAllPosts, getPostBySlug } from "../../../lib/api";
-import markdownToHtml from "../../../lib/markdownToHtml";
+import remarkGfm from "remark-gfm";
 
 type Props = {
   post: PostType;
-  morePosts: PostType[];
-  preview?: boolean;
 };
 
-const Post = ({ post, morePosts, preview }: Props) => {
+const Post = ({ post }: Props) => {
   return (
     <Container p={16}>
       <Heading>{post.title}</Heading>
       <Text>{post.date}</Text>
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+
+      <Box mt={16} mb={16}>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {post.content}
+        </ReactMarkdown>
+      </Box>
+      <Link href="/posts">
+        <a>←記事一覧へ戻る</a>
+      </Link>
     </Container>
   );
 };
@@ -35,7 +43,7 @@ export const getStaticProps = async ({ params }: Params) => {
     "onImage",
     "coverImage",
   ]);
-  const content = await markdownToHtml(post.content || "");
+  const content = post.content;
 
   return {
     props: {
