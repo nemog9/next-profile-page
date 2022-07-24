@@ -27,6 +27,7 @@ const Post = ({ post }: Props) => {
         language={match[1]}
         PreTag="div"
         {...props}
+        w={100}
       >
         {String(children).replace(/\n$/, "")}
       </SyntaxHighlighter>
@@ -37,7 +38,7 @@ const Post = ({ post }: Props) => {
     );
   };
   return (
-    <Container p={16}>
+    <Container p={[8, 16]}>
       <Heading>{post.title}</Heading>
       <Text>{post.date}</Text>
 
