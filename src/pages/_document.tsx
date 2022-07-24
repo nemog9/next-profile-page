@@ -30,17 +30,4 @@ class MyDocument extends Document {
   }
 }
 
-// const MyDocument = () => {
-//   return (
-//     <Html lang="ja">
-//       <Head />
-//       <body>
-//         <ColorModeScript initialColorMode="dark" />
-//         <Main />
-//         <NextScript />
-//       </body>
-//     </Html>
-//   );
-// };
-
 export default MyDocument;
