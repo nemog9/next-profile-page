@@ -38,7 +38,7 @@ const Post = ({ post }: Props) => {
     );
   };
   return (
-    <Container p={[8, 16]}>
+    <Container p={8} maxW='container.xl' >
       <Heading>{post.title}</Heading>
       <Text>{post.date}</Text>
 

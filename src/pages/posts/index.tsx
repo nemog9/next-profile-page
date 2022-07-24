@@ -9,7 +9,7 @@ type Props = {
 
 const BlogList = ({ allPosts }: Props) => {
   return (
-    <Container p={[16, 16]}>
+    <Container p={8} maxW='container.xl' >
       <Heading>記事一覧</Heading>
       <Box mt={16} mb={16}>
         {allPosts.map(({ title, date, slug }) => {
