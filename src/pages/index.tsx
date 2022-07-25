@@ -22,12 +22,16 @@ const Home: NextPage = () => {
       </VStack>
       <VStack>
         <Introduction />
-        <Box p={4}>
-          <Link href="/posts">
-            <a>→ブログ記事一覧</a>
-          </Link>
-        </Box>
         <LinkList />
+        <Heading as="h2" size="md" pt={4}>
+          ページ内リンク
+        </Heading>
+        <Link href="/posts">
+          <a>→ブログ記事一覧</a>
+        </Link>
+        <Link href="/keydown">
+          <a>→キーボード入力できるページ</a>
+        </Link>
       </VStack>
     </Container>
   );
