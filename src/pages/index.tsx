@@ -32,6 +32,9 @@ const Home: NextPage = () => {
         <Link href="/keydown">
           <a>→キーボード入力できるページ</a>
         </Link>
+        <Link href="/threeSample">
+          <a>→キューブが回転しているページ</a>
+        </Link>
       </VStack>
     </Container>
   );
