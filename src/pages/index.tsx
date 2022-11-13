@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     <Container p={[16, 16]}>
       <VStack justify="center" align="center">
         <ChakraImage
-          src="/profile.jpg"
+          src="/profile-icon.jpg"
           alt="icon"
           width={20}
           height={20}
